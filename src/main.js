@@ -10,10 +10,11 @@ Vue.use(Vuetify)
 Vue.config.productionTip = false
 
 firebase.initializeApp({
-  apiKey: 'Your key here',
-  authDomain: 'Your domain here',
-  databaseURL: 'Your Database Url Here',
-  projectId: 'Project Id Here'
+  apiKey: process.env.firebase.apiKey,
+  authDomain: process.env.firebase.authDomain,
+  databaseURL: process.env.firebase.databaseURL,
+  projectId: process.env.firebase.projectId,
+  storageBucket: process.env.firebase.storageBucket
 })
 
 /* eslint-disable no-new */
